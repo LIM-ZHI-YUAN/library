@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>My Library</h2>
+        </div>
+        <div class="sidebar">
+            <div class="form-container">
+                <form id="book-form">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" required>
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages"  required>
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+        </div>
+        <div class="main">
+            <div class="books"></div>
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
