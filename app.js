@@ -1,3 +1,23 @@
+class Book {
+    title;
+    author;
+    pages;
+    id;
+    seen;
+    
+    constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.id = crypto.randomUUID();
+        this.seen = false;
+    }
+
+    read() {
+        this.seen = !this.seen;
+    }
+}
+
 const myLibrary = [];
 
 const book1 = new Book("test1", "test1", 21);
@@ -37,18 +57,6 @@ function refreshLibrary() {
     }
 }
 
-function Book(title, author, pages) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.id = crypto.randomUUID();
-    this.seen = false;
-}
-
-Book.prototype.read = function () {
-    this.seen = !this.seen;
-};
-
 function addBookToLibrary(book) {
     myLibrary.push(book);
 }
@@ -68,7 +76,6 @@ function generateBookCard(book) {
     const pages = document.createElement("p");
     pages.setAttribute("class", "book-pages");
     pages.textContent = book.pages;
-
 
     const status = document.createElement("p");
     status.setAttribute("class", "book-status");
