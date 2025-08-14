@@ -16,6 +16,10 @@ class Book {
     read() {
         this.seen = !this.seen;
     }
+
+    get titleAndAuhtor() {
+        return this.title + " by " + this.author;
+    }
 }
 
 const myLibrary = [];
