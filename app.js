@@ -17,8 +17,12 @@ class Book {
         this.seen = !this.seen;
     }
 
-    get titleAndAuhtor() {
+    get titleAndAuthor() {
         return this.title + " by " + this.author;
+    }
+
+    set title(newTitle) {
+        this.title = newTitle;
     }
 }
 
