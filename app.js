@@ -24,6 +24,10 @@ class Book {
     set title(newTitle) {
         this.title = newTitle;
     }
+
+    set author(newAuthor) {
+        this.author = newAuthor;
+    }
 }
 
 const myLibrary = [];
