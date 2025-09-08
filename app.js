@@ -49,11 +49,16 @@ const form = document.getElementById("book-form");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const title = document.getElementById("title").value;
-    const author = document.getElementById("author").value;
-    const pages = document.getElementById("pages").value;
+    const title = document.getElementById("title");
+    const author = document.getElementById("author");
+    const pages = document.getElementById("pages");
+    alert(title.validity.valueMissing);
+    if(title.validity.valueMissing || author.validity.valueMissing || pages.validity.valueMissing) {
+        alert("Please fill in all fields");
+        return;
+    }
 
-    const book = new Book(title, author, pages);
+    const book = new Book(title.value, author.value, pages.value);
     addBookToLibrary(book);
     refreshLibrary();
     form.reset(); // Clear the form after adding
